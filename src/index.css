@@ -34,7 +34,7 @@ h5 {
 
 .categories button {
   border-radius: 0;
-  background: #c3c3c3;
+  background: yellow;
   color: #1a1a1a;
   font-weight: bold;
   border: none;
@@ -44,6 +44,7 @@ h5 {
   cursor: pointer;
   width: 20%;
   height: 2rem;
+  
 }
 
 .categories button:focus {
