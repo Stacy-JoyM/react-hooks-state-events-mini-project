@@ -5,13 +5,13 @@ function NewTaskForm({categories, onTaskFormSubmit }) {
   const [formData, setFormData] = useState({
     id:"",
     text:"",
-    category:""
+    category:categories[0]
   })
   //handle onChange input of options to read values
   function handleCategoryChange(event){
     const {name, value} = event.target
     setFormData(({...formData, //since you are updating two fields, destructure
-      [name]:value})) // update field based on name input
+      [name]:value })) 
 
   }
   //handle submit to post values to setFormData
@@ -22,7 +22,13 @@ function NewTaskForm({categories, onTaskFormSubmit }) {
       id:uuid()
     }
     onTaskFormSubmit(newTask); //Pass new form 
-    setFormData({text:"" , category:categories[0] }) //Reset Form Data
+    
+     // Reset the form fields after submission
+     setFormData({
+      id: "",
+      text: "",
+      category: categories[0],  // Reset to the default category
+    });
 
   }
   //loop through categories to get value for options
