@@ -32,7 +32,7 @@ function App() {
                       handleCategoryChange={handleCategoryChange}
       />
       <NewTaskForm onTaskFormSubmit={onTaskFormSubmit} categories={categories}/>
-      <TaskList tasks={tasks} setTasks={setTasks} selectedCategory={selectedCategory} />
+      <TaskList tasks={tasks} setTasks={setTasks} selectedCategory={selectedCategory}/>
     </div>
   )
 }

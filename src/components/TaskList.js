@@ -1,8 +1,9 @@
 import React from "react";
 import Task from "./Task"
 
-function TaskList({tasks, setTasks, selectedCategory}) {
-  
+function TaskList({tasks, setTasks, selectedCategory="All"}) {
+
+
   //return only tasks list matching category 
   const displayedTasks = tasks.filter((task)=> {
     //Check if selectedCategory is All, return All, else return tasks with matching selectedCategory
@@ -14,7 +15,8 @@ function TaskList({tasks, setTasks, selectedCategory}) {
       <Task key={task.id} 
             category={task.category} 
             text={task.text} 
-            onDelete={()=> handleDeleteTask(task.id)}/>
+            onDelete={()=> handleDeleteTask(task.id)}
+            />
     )
   )
  //function that deletes tasks
